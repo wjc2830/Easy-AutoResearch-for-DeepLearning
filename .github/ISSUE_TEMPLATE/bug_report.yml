@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible problem with the skill, installer, or runtime
+title: "[Bug]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a bug. Share only the information needed to reproduce it.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Skill setup or invocation
+        - Installer
+        - Research loop runtime
+        - Bundled helper skill
+        - Documentation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Provide the smallest safe sequence that reproduces the problem.
+      placeholder: |
+        1. Install or invoke...
+        2. Provide...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include Linux distribution, Python version, Claude Code version if known, and release or commit.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Redacted logs
+      description: Paste only the smallest relevant excerpt. Remove credentials, tokens, private paths, hostnames, dataset contents, and other sensitive information.
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checklist
+      options:
+        - label: I removed credentials, tokens, secrets, private data, and identifying infrastructure details.
+          required: true
+        - label: This report does not require maintainers to run real training or consume GPU resources to understand it.
+          required: true

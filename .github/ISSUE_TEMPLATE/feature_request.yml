@@ -1,0 +1,46 @@
+name: Feature request
+description: Propose a focused improvement to the skill or its supporting tools
+title: "[Feature]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: Explain the research workflow need before proposing implementation details.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or workflow need
+      description: What current limitation makes supervised research harder or less safe?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest skill-first change that would address the need.
+    validations:
+      required: true
+  - type: textarea
+    id: interaction
+    attributes:
+      label: User interaction
+      description: Show how a user would request or control this through natural language, if applicable.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe existing workflows or smaller alternatives you considered.
+  - type: textarea
+    id: safety
+    attributes:
+      label: Safety and resource impact
+      description: Note effects on permissions, files, process signaling, network access, tokens, GPUs, storage, or training duration.
+    validations:
+      required: true
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Sensitive information
+      options:
+        - label: I did not include credentials, tokens, secrets, private data, or unredacted logs.
+          required: true

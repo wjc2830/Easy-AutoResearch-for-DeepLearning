@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata in this file."
+title: "Easy-Auto-Research for Deep Learning"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Juncheng
+version: 1.0.0
+repository-code: "https://github.com/wjc2830/Easy-AutoResearch-for-DeepLearning"
+license: MIT
