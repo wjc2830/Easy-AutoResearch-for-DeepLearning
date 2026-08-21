@@ -1,0 +1,47 @@
+{
+  "_instructions": [
+    "Fill in the fields below, then save this file and press Enter in the init.py terminal.",
+    "REQUIRED fields (init.py will not proceed until these are filled): codebase_path, what, dos, donts.",
+    "OPTIONAL fields may be left as empty string \"\". If left empty and marked delegatable,",
+    "the interviewer will delegate them to the verifier agent to determine at runtime.",
+    "Preserve exact numbers, metric names, and file paths — the interviewer will not invent them.",
+    "Lines starting with an underscore key (like this one and the _hint_* keys) are ignored."
+  ],
+
+  "codebase_path": "",
+  "_hint_codebase_path": "REQUIRED. Absolute path to the target project codebase (must exist).",
+
+  "what": "",
+  "_hint_what": "REQUIRED. The specific research/optimization task an autonomous agent can act on.",
+
+  "why": "",
+  "_hint_why": "OPTIONAL. The motivation / problem driving this work. Leave \"\" to skip.",
+
+  "how": "",
+  "_hint_how": "OPTIONAL, delegatable. Metric to optimize AND direction (max/min), e.g. 'maximize test_acc'. Leave \"\" to let the verifier identify it.",
+
+  "baseline": "",
+  "_hint_baseline": "OPTIONAL, delegatable. Current baseline value for the 'how' metric. Leave \"\" to let the verifier measure it.",
+
+  "terminate": "",
+  "_hint_terminate": "OPTIONAL, delegatable. Full-training result that means 'done, auto-research succeeded'. Leave \"\" to let the verifier decide.",
+
+  "search_posture": "",
+  "_hint_search_posture": "OPTIONAL. One of 'hparam' | 'structural' | 'mixed' (default 'mixed' if empty). Declares whether this project's win is expected from tuning existing knobs ('hparam' — reward careful search, do NOT force method changes), from new methods/formulations/architectures ('structural' — reward literature-grounded novelty, penalize repeated knob tweaks), or both ('mixed'). This governs how hard the planner is pushed away from naive hyperparameter search and toward external knowledge — set it honestly for the task, since it directly tunes the anti-overfit pressure.",
+
+  "method_priors": [],
+  "_hint_method_priors": "OPTIONAL. List of known methods/techniques/baselines worth trying for THIS task (e.g. named regularizers, schedules, loss variants, architecture variants, or task-specific baselines that fit within the allowed edit surface). Seeds the planner's structural-change menu so it need not rediscover the field from scratch. Leave [] to let the planner discover methods via literature search at runtime.",
+
+  "signal_horizon_hint": "",
+  "_hint_signal_horizon_hint": "OPTIONAL. How long before an experiment reveals whether it is working, in the task's own units (e.g. 'loss trend clear by ~500 steps', 'val metric meaningful only after 1 full epoch', 'penalty effect only visible after the anneal boundary'). Feeds the verifier's kill-early patience so slower-to-emerge structural changes are not killed prematurely. Leave \"\" to let the verifier infer it from early logs.",
+
+  "dos": [
+    ""
+  ],
+  "_hint_dos": "REQUIRED. >=1 always-do rule, e.g. 'always use the davinci conda env', 'always run on a single GPU during debugging'.",
+
+  "donts": [
+    ""
+  ],
+  "_hint_donts": "REQUIRED. >=1 never-do rule, e.g. 'never modify the base checkpoint at /path/to/base', 'never push to git'."
+}

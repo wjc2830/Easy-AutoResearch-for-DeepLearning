@@ -1,0 +1,27 @@
+{
+  "_instructions": [
+    "Illustrative only: adapt every path, command, metric, and constraint to your project.",
+    "The example is intentionally not directly executable."
+  ],
+  "codebase_path": "/path/to/local-ml-project",
+  "what": "Improve validation accuracy for a local image classifier. Use the project's documented training command, replacing this sentence with the exact command before running.",
+  "why": "The current validation result is below the project's deployment requirement.",
+  "how": "Maximize the validation accuracy recorded in the project's metrics file.",
+  "baseline": "Replace with a measured baseline from the current environment.",
+  "terminate": "Replace with a numeric target and an explicit reproducibility requirement.",
+  "search_posture": "mixed",
+  "method_priors": [
+    "learning-rate scheduling",
+    "regularization",
+    "data augmentation"
+  ],
+  "signal_horizon_hint": "Replace with the earliest point at which validation accuracy is meaningful.",
+  "dos": [
+    "Use only the project-local environment and documented training entry point.",
+    "Record the exact command and metric artifact for every experiment."
+  ],
+  "donts": [
+    "Do not change the held-out validation data.",
+    "Do not install system-wide packages or publish artifacts."
+  ]
+}

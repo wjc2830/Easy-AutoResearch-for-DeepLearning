@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+README-preview.html
+
+# Easy-Auto-Research for Deep Learning run artifacts (generated inside a project dir, never committed here)
+WorkSpace/
+CycleReport/
+solutions/
+agent_history/
+agent_interactions/
+agent_thoughts.log
+research_log.md
+uuid_ledger.jsonl
+.sessions.json
+.knowledge_digest.md
+.plan_ledger.jsonl
+.metric_ledger.jsonl
+.last_phenomena.md
+.training_pid
+human_comments.txt
+human_interrupt.txt
+.human_comments.txt.queue.*
+.human_interrupt.txt.queue.*
+goal.md
+PROJECT_BRIEF.md
+.ar_model
+
+# OS / editor
+.DS_Store
+*.swp
